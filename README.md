@@ -4,7 +4,7 @@
 
 1. [Cluster Maintenance](#cluster-maintenance)
     
-    1.1 [Upgrade Cluster](Upgrade-Cluster.md)
+    1.1 [Upgrade Cluster](cluster-maintenance/upgrade-cluster.md)
 
 ## 1. Cluster Maintenance
-### 1.1 [Uprade Cluster](Upgrade-Cluster.md)
+### 1.1 [Upgrade Cluster](cluster-maintenance/upgrade-cluster.md)

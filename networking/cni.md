@@ -1,4 +1,5 @@
-# CNI- Container Network Interface
+# CNI - Container Network Interface
+Docs: [K8s Docs - Network Plugins](https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/)
 
 ## Check CNI
 ```sh
@@ -62,6 +63,14 @@ After removing all k8s resources:
 rm /etc/cni/net.d/<cni-conflist>
 ```
 
+## Check Pod CIDR
+```sh
+kubectl cluster-info dump | grep -m 1 cluster-cidr
+
+# or per-node
+kubectl get nodes -o jsonpath='{range .items[*]}{.metadata.name}{"\t"}{.spec.podCIDR}{"\n"}{end}'
+```
+
 ### Notes
-1. Not all CNI support `Network Policies`
+1. Not all CNI support `Network Policies` (Flannel does NOT, Calico and Weave do)
 
